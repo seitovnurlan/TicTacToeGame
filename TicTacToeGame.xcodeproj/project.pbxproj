@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		280C4BF729939D5300DD0613 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C4BF629939D5300DD0613 /* main.swift */; };
+		280C4BFE2993A27600DD0613 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C4BFD2993A27600DD0613 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		280C4BF329939D5300DD0613 /* TicTacToeGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TicTacToeGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		280C4BF629939D5300DD0613 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		280C4BFD2993A27600DD0613 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				280C4BF629939D5300DD0613 /* main.swift */,
+				280C4BFD2993A27600DD0613 /* Game.swift */,
 			);
 			path = TicTacToeGame;
 			sourceTree = "<group>";
@@ -121,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				280C4BF729939D5300DD0613 /* main.swift in Sources */,
+				280C4BFE2993A27600DD0613 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
