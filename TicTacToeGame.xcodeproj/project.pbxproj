@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		280C4BF729939D5300DD0613 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C4BF629939D5300DD0613 /* main.swift */; };
 		280C4BFE2993A27600DD0613 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C4BFD2993A27600DD0613 /* Game.swift */; };
+		280C4C00299405D400DD0613 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C4BFF299405D400DD0613 /* Menu.swift */; };
+		280C4C02299409BC00DD0613 /* GameAgainstHuman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C4C01299409BC00DD0613 /* GameAgainstHuman.swift */; };
+		280C4C0429940A2400DD0613 /* PlayingAgainstBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C4C0329940A2400DD0613 /* PlayingAgainstBot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +30,9 @@
 		280C4BF329939D5300DD0613 /* TicTacToeGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TicTacToeGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		280C4BF629939D5300DD0613 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		280C4BFD2993A27600DD0613 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		280C4BFF299405D400DD0613 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		280C4C01299409BC00DD0613 /* GameAgainstHuman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAgainstHuman.swift; sourceTree = "<group>"; };
+		280C4C0329940A2400DD0613 /* PlayingAgainstBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingAgainstBot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 			children = (
 				280C4BF629939D5300DD0613 /* main.swift */,
 				280C4BFD2993A27600DD0613 /* Game.swift */,
+				280C4BFF299405D400DD0613 /* Menu.swift */,
+				280C4C01299409BC00DD0613 /* GameAgainstHuman.swift */,
+				280C4C0329940A2400DD0613 /* PlayingAgainstBot.swift */,
 			);
 			path = TicTacToeGame;
 			sourceTree = "<group>";
@@ -123,8 +132,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280C4C00299405D400DD0613 /* Menu.swift in Sources */,
 				280C4BF729939D5300DD0613 /* main.swift in Sources */,
 				280C4BFE2993A27600DD0613 /* Game.swift in Sources */,
+				280C4C0429940A2400DD0613 /* PlayingAgainstBot.swift in Sources */,
+				280C4C02299409BC00DD0613 /* GameAgainstHuman.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
