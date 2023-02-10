@@ -14,42 +14,59 @@ class GameAgainstHuman: Game {
     
     override func startGame() {
         print("Введите имя первого игрока: X")
-    var name1 = readLine()!
+    let name1 = readLine()!
         print("Введите имя второго игрока: 0")
-    var name2 = readLine()!
-    var playername: String = name1
+    let name2 = readLine()!
     var sign: String = "X"
     var replacing: Bool = true
     var playoff: Bool = false
-    
+    playerName = name1
     while true {
         if replacing {
-            playername = name1
+            playerName = name1
             sign = "X"
             replacing = false
         } else
-        {playername = name2
+        {playerName = name2
             sign = "0"
             replacing = true}
-        print("Введите координаты игрока по столбцу: \(playername)")
-        var column = readLine()!
-        print("Введите координаты игрока по строке: \(playername)")
-        var row = readLine()!
+        print("Введите координаты игрока по столбцу: \(playerName)")
+        let column = readLine()!
+        print("Введите координаты игрока по строке: \(playerName)")
+        let row = readLine()!
+        
+//        for i in 0...2 {
+//            var b:Int = 1
+//            if Int(column) == (i+1) && Int(row) == (b) && array1[i] != "X" && array1[i] != "0" {
+//                array1[i] = sign
+//                print(array1[i], b)
+//            } else
+//            if Int(column) == (i+1) && Int(row) == (b) && array2[i] != "X" && array2[i] != "0" {
+//                array2[i] = sign
+//                print(array2[i], b)
+//            } else
+//            if Int(column) == (i+1) && Int(row) == (b) && array3[i] != "X" && array3[i] != "0" {
+//                array3[i] = sign
+//                print(array3[i], b)
+//            }
+//            b += 1
+//        }
+//        print(array1,array2,array3)
         
         if column == "1" && row == "1" && array1[0] != "X" && array1[0] != "0" {
               array1[0] = sign
         } else
-        if column == "2" && row == "1" && array1[1] != "X" && array1[1] != "0"  {
+        if column == "2" && row == "1" && array1[1] != "X" && array1[1] != "0" {
             array1[1] = sign
         } else
-        if column == "3" && row == "1" && array1[2] != "X" && array1[2] != "0"{
+        if column == "3" && row == "1" && array1[2] != "X" && array1[2] != "0" {
             array1[2] = sign
         } else
         //-------------------------------
         if column == "1" && row == "2" && array2[0] != "X" && array2[0] != "0" {
             array2[0] = sign
         } else
-        if column == "2" && row == "2" && array2[1] != "X" && array2[1] != "0"{
+        if column == "2" && row == "2" && array2[1] != "X" && array2[1] != "0" {
             array2[1] = sign
         } else
         if column == "3" && row == "2" && array2[2] != "X" && array2[2] != "0" {
@@ -136,14 +153,13 @@ class GameAgainstHuman: Game {
     if u == 1 || o == 1 {playoff = true}
     if s == 1 || d == 1 || f == 1 || g == 1  {playoff = true}
     if playoff {
-        print("Игра окончена: выиграл \(playername)")
-//    print(" Выиграл \(playername) i= \(i), j= \(j), k= \(k), w= \(w), t= \(t), y= \(y), (u + s + f) = \(u) \(s) \(f), (o + d + g)=\(o) \(d) \(g)")
+        endGame()
             break
     }
             }
         }
     
     override func endGame() {
-        
+        print("Игра окончена: выиграл \(playerName)")
     }
 }

@@ -8,7 +8,8 @@ class Game: Menu {
     var array2: [String] = []
     var array3: [String] = []
     
-    init(playerName: String, array1: [String], array2: [String], array3: [String]) {
+    init(playerName: String, array1: [String],
+         array2: [String], array3: [String]) {
         self.playerName = playerName
         self.array1 = array1
         self.array2 = array2
@@ -18,7 +19,7 @@ class Game: Menu {
     func startGame() {
         
     }
-        func endGame() {
+    func endGame() {
             
         }
     

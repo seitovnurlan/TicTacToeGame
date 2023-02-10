@@ -26,12 +26,11 @@
 
 import Foundation
 
-var player1 = Game(playerName: "Ivan", array1: ["","",""], array2: ["","",""], array3: ["","",""])
-var player2 = Game(playerName: "Petr", array1: ["","",""], array2: ["","",""], array3: ["","",""])
-var player3 = GameAgainstHuman(playerName: "Igor", array1: ["","",""], array2: ["","",""], array3: ["","",""])
-var player4 = PlayingAgainsBot(playerName: "Pasha", array1: ["","",""], array2: ["","",""], array3: ["","",""])
+var player1 = GameAgainstHuman(playerName: "Igor", array1: ["","",""], array2: ["","",""], array3: ["","",""])
+var player2 = PlayingAgainsBot(playerName: "Pasha", array1: ["","",""], array2: ["","",""], array3: ["","",""])
 
 
-//player3.startGame()
-player4.startGame()
+player1.startGame()  // Игра против человека
+//player2.startGame()    //Игра против ботв
+
 
