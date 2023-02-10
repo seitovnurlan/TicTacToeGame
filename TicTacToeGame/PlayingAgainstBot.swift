@@ -13,20 +13,23 @@ class PlayingAgainsBot: Game {
     }
     
     override func startGame(){
-        print("Введите имя игрока: X")
-    let name1 = readLine()!
-        print("С вами играет бот в роли второго игрока: 0")
+    
+        let name1: String = playerName
+        print("Добро пожаловать в игру крестики нолики: \(name1) у Вас знак \"Х\"")
     let name2 = "Бот"
-    playerName = name1
+        print("С вами играет бот в роли второго игрока со знаком \"0\"")
     var sign: String = "X"
     var replacing: Bool = true
     var playoff: Bool = false
+    var flag: Bool = true
     
     while true {
+        
         if replacing {
             playerName = name1
             sign = "X"
             replacing = false
+            flag = true
             print("Введите координаты игрока по столбцу: \(playerName)")
             let column = readLine()!
             print("Введите координаты игрока по строке: \(playerName)")
@@ -63,48 +66,58 @@ class PlayingAgainsBot: Game {
         }
             
         } else
-        {  playerName = name2
-            print(" Ход бота 0")
-            sign = "0"
-            replacing = true
-            let column = Int.random(in: 0...2)
-            let row = Int.random(in: 0...2)
-            
-            if column == 1 && row == 1 && array1[0] != "X" && array1[0] != "0" {
-                  array1[0] = sign
-            } else
-            if column == 2 && row == 1 && array1[1] != "X" && array1[1] != "0"  {
-                array1[1] = sign
-            } else
-            if column == 3 && row == 1 && array1[2] != "X" && array1[2] != "0"{
-                array1[2] = sign
-            } else
-            //-------------------------------
-            if column == 1 && row == 2 && array2[0] != "X" && array2[0] != "0" {
-                array2[0] = sign
-            } else
-            if column == 2 && row == 2 && array2[1] != "X" && array2[1] != "0"{
-                array2[1] = sign
-            } else
-            if column == 3 && row == 2 && array2[2] != "X" && array2[2] != "0" {
-                array2[2] = sign
-            } else
-            //-------------------------------
-            if column == 1 && row == 3 && array3[0] != "X" && array3[0] != "0" {
-                array3[0] = sign
-            } else
-            if column == 2 && row == 3 && array3[1] != "X" && array3[1] != "0" {
-                array3[1] = sign
-            } else
-            if column == 3 && row == 3 && array3[2] != "X" && array3[2] != "0" {
-                array3[2] = sign
+        {
+            print(" Ход бота со знаком \"0\"")
+            while flag
+            {
+                playerName = name2
+                sign = "0"
+                replacing = true
+                let column = Int.random(in: 1...3)
+                let row = Int.random(in: 1...3)
+                if column == 1 && row == 1 && array1[0] != "X" && array1[0] != "0" {
+                    array1[0] = sign
+                    flag = false
+                } else
+                if column == 2 && row == 1 && array1[1] != "X" && array1[1] != "0"  {
+                    array1[1] = sign
+                    flag = false
+                } else
+                if column == 3 && row == 1 && array1[2] != "X" && array1[2] != "0"{
+                    array1[2] = sign
+                    flag = false
+                } else
+                //-------------------------------
+                if column == 1 && row == 2 && array2[0] != "X" && array2[0] != "0" {
+                    array2[0] = sign
+                    flag = false
+                } else
+                if column == 2 && row == 2 && array2[1] != "X" && array2[1] != "0"{
+                    array2[1] = sign
+                    flag = false
+                } else
+                if column == 3 && row == 2 && array2[2] != "X" && array2[2] != "0" {
+                    array2[2] = sign
+                    flag = false
+                } else
+                //-------------------------------
+                if column == 1 && row == 3 && array3[0] != "X" && array3[0] != "0" {
+                    array3[0] = sign
+                    flag = false
+                } else
+                if column == 2 && row == 3 && array3[1] != "X" && array3[1] != "0" {
+                    array3[1] = sign
+                    flag = false
+                } else
+                if column == 3 && row == 3 && array3[2] != "X" && array3[2] != "0" {
+                    array3[2] = sign
+                    flag = false
+                }
             }
-            
+            print(array1)
+            print(array2)
+            print(array3)
         }
-        print(array1)
-        print(array2)
-        print(array3)
-        
         var i: Int = 0
         var j: Int = 0
         var k: Int = 0
@@ -170,7 +183,11 @@ class PlayingAgainsBot: Game {
     if i == 3 || j == 3 || k == 3 || w == 3 || t==3 || y == 3 {playoff = true}
     if u == 1 || o == 1 {playoff = true}
     if s == 1 || d == 1 || f == 1 || g == 1  {playoff = true}
-    
+        if playoff == true && playerName == name1 {
+            print(array1)
+            print(array2)
+            print(array3)
+        }
         if playoff { endGame()
             break
         }

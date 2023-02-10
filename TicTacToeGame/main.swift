@@ -26,11 +26,11 @@
 
 import Foundation
 
-var player1 = GameAgainstHuman(playerName: "Igor", array1: ["","",""], array2: ["","",""], array3: ["","",""])
-var player2 = PlayingAgainsBot(playerName: "Pasha", array1: ["","",""], array2: ["","",""], array3: ["","",""])
+var player1 = GameAgainstHuman(playerName: "Nurlan", array1: ["","",""], array2: ["","",""], array3: ["","",""])
+var player2 = PlayingAgainsBot(playerName: "Nurlan", array1: ["","",""], array2: ["","",""], array3: ["","",""])
 
 
-player1.startGame()  // Игра против человека
-//player2.startGame()    //Игра против ботв
+//player1.startGame()  // Игра против человека
+player2.startGame()    //Игра против ботв
 
 

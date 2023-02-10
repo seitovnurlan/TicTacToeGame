@@ -13,14 +13,15 @@ class GameAgainstHuman: Game {
     }
     
     override func startGame() {
-        print("Введите имя первого игрока: X")
-    let name1 = readLine()!
-        print("Введите имя второго игрока: 0")
+        let name1: String = playerName
+        print("Добро пожаловать в игру крестики нолики: \(name1) у Вас знак \"Х\"")
+        print("Введите имя второго игрока: у вас знак \"0\"")
     let name2 = readLine()!
     var sign: String = "X"
     var replacing: Bool = true
     var playoff: Bool = false
-    playerName = name1
+        
+   // playerName = name1
     while true {
         if replacing {
             playerName = name1
